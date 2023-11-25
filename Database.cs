@@ -8,7 +8,7 @@ namespace fr34kyn01535.Uconomy
     {
         internal DatabaseManager()
         {
-            new I18N.West.CP1250(); //Workaround for database encoding issues with mono
+            new I18N.West.CP1250(); //Workaround for database encoding issues with 
             CheckSchema();
         }
 
