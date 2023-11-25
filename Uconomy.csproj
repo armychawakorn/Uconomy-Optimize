@@ -48,11 +48,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Libraries\I18N.v4.0.0.0.dll" />
-    <Content Include="Libraries\I18N.West.v4.0.0.0.dll" />
+    <Content Include="Libraries\I18N.v4.0.0.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\I18N.West.v4.0.0.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\System.Threading.Tasks.Extensions.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="lib\Assembly-CSharp.dll" />
     <Content Include="lib\com.rlabrecque.steamworks.net.dll" />
-    <Content Include="Libraries\MySql.Data.v8.2.0.0.dll" />
+    <Content Include="Libraries\MySql.Data.v8.2.0.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="lib\Rocket.API.dll" />
     <Content Include="lib\Rocket.Core.dll" />
     <Content Include="lib\Rocket.Unturned.dll" />
