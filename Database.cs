@@ -121,7 +121,7 @@ namespace fr34kyn01535.Uconomy
 
                 if (test == null)
                 {
-                    command.CommandText = "CREATE TABLE `" + Uconomy.Instance.Configuration.Instance.DatabaseTableName + "` (`steamId` varchar(32) NOT NULL,`balance` decimal(15,2) NOT NULL DEFAULT '25.00',`lastUpdated` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,PRIMARY KEY (`steamId`)) ";
+                    command.CommandText = $"CREATE TABLE `{Uconomy.Instance.Configuration.Instance.DatabaseTableName}` (`steamId` VARCHAR(32) NOT NULL COLLATE 'utf8mb4_general_ci',`balance` DECIMAL(15,2) NOT NULL DEFAULT '25.00',`lastUpdated` TIMESTAMP NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),PRIMARY KEY (`steamId`) USING BTREE)COLLATE='utf8mb4_general_ci'ENGINE=InnoDB;";
                     command.ExecuteNonQuery();
                 }
                 connection.Close();
